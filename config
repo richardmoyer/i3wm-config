@@ -201,3 +201,5 @@ exec_always google-play-music-desktop-player
 exec_always google-chrome
 exec_always feh --bg-scale /home/rich/Pictures/think.jpeg
 exec_always synclient TouchpadOff=1
+
+exec_always compton -f
