@@ -95,13 +95,14 @@ bindsym $mod+a focus parent
 set $workspace1 "1: Terminals "
 set $workspace2 "2: Chrome "
 set $workspace3 "3: VS Code "
+set $workspace4 "4: PyCharm "
 set $workspace10 "10: Music "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace 4
+bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -112,7 +113,7 @@ bindsym $mod+0 workspace $workspace10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+3 move container to workspace $workspace3 
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -124,13 +125,14 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Google Play Music Desktop Player"] $workspace10
 assign [class="Google-chrome"] $workspace2
 assign [class="Code"] $workspace3
+assign [class="jetbrains-pycharm"] $workspace4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -198,3 +200,4 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always google-play-music-desktop-player
 exec_always google-chrome
 exec_always feh --bg-scale /home/rich/Pictures/think.jpeg
+exec_always synclient TouchpadOff=1
