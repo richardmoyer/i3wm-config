@@ -96,7 +96,7 @@ set $workspace1 "1: Terminals "
 set $workspace2 "2: Chrome "
 set $workspace3 "3: VS Code "
 set $workspace4 "4: PyCharm "
-set $workspace10 "10: Music "
+set $workspace10 "10: Music "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -163,7 +163,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks -c /home/rich/.config/i3/i3blocks.conf
+        tray_output none
 }
 
 set $br #000000
